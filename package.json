@@ -1,0 +1,19 @@
+{
+  "name": "drum-machine",
+  "version": "1.0.0",
+  "description": "musical instrument machine",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw ./style.scss -o ./style.css",
+    "watch": "npm run scss-compile"
+  },
+  "author": "Ifeanyi Amah",
+  "license": "MIT",
+  "devDependencies": {
+    "scss-compile": "^0.1.7"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

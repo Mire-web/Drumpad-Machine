@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css/style.css">
+	<title>Drum Machine</title>
+</head>
+<body>
+	<div id="drum-machine">
+		<div id="drum-pad">
+			<div class="drum-pad">
+				<audio src="" class="clip" id="Q"></audio>
+				<span>Q</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="W"></audio>
+				<span>W</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="E"></audio>
+				<span>E</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="A"></audio>
+				<span>A</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="S"></audio>
+				<span>S</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="D"></audio>
+				<span>D</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="Z"></audio>
+				<span>Z</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="X"></audio>
+				<span>X</span>
+			</div>
+			<div class="drum-pad">
+				<audio src="" class="clip" id="C"></audio>
+				<span>C</span>
+			</div>
+		</div>
+		<div id="controls">
+			<div class="head">
+				<h1>Power:<!--TODO: use js to determine power state--></h1>
+			<label class="switch">
+				<input type="checkbox" id="power" checked>
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<div id="display"></div>
+			<input type="range" name="volume" min="0" max="100" value="20">
+			<div class="head">
+				<h1>Bank:<!--TODO: use js to determine bank state--></h1>
+			<label class="switch">
+				<input type="checkbox" id="bank" checked>
+				<span class="slider round"></span>
+			</label>
+		</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>

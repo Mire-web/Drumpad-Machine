@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: grid;
+	font-family: 'Kdam Thmor Pro', sans-serif;
+	height: 100vh;
+	align-content: center;
+	justify-items:center;
+	user-select: none;
+	background: lighten(#DCDCDC, 5%)
+}
+
+#drum-machine{
+	display: flex;
+	padding: 15px;
+	width: 600px;
+	border: 2px double gold;
+}
+
+#drum-pad{
+	display: grid;
+	margin: 10px 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+.drum-pad{
+	display: flex;
+	align-items: center;
+	justify-contents: center;
+	text-align: center;
+	height: 60px;
+	width: 80px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px;
+	&:nth-child(2n+0){
+	background: lighten(red, 5%);
+	&:hover{
+	background: darken(red, 5%);
+	}
+	}
+	&:nth-child(3n+0){
+	background: lighten(limegreen, 5%);
+	&:hover{
+	background: darken(limegreen, 5%);
+	}
+	}
+	&:nth-child(4n+1){
+	background: lighten(lightskyblue, 5%);
+	&:hover{
+	background: darken(skyblue, 5%);
+	}
+	}
+	&:nth-child(7n+0){
+	background: lighten(gold, 5%);
+	&:hover{
+	background: darken(gold, 5%)
+	}
+	}
+	& span{
+	width: 100%;
+	}
+}
+
+#controls{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	justify-contents:center;
+	align-items:center;
+	align-self: center;
+	justify-self: center;
+}
+
+#display{
+	width: 150px;
+	height: 30px;
+	padding: 5px;
+	font-weight: bolder;
+	text-align: center;
+	background: lighten(grey, 5%);
+	margin: 15px auto;
+}
+
+/* Range */
+
+input[type="range"]{
+	-webkit-appearance: none;
+	margin: 10px auto;
+	height: 4px;
+	width: 150px;
+	background: black;
+	border: 1px solid blue;
+	&::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		height: 25px;
+		width: 10px;
+		background: blue;
+		border: 1px solid black;
+		cursor: ew-resize;
+		box-shadow: 0 0 2px 0 #555;
+		transition: background .3s ease;
+	}
+}
+
+/* toggle switch */
+
+.switch{
+	position: relative;
+	display:inline-block;
+	width:55px;
+	height: 25px;
+	/* hide the default box */
+	& input{
+	opacity:0;
+	width:0;
+	height:0;
+	}
+}
+
+/* slider */
+
+.slider{
+	position: absolute;
+	border: 1px solid red;
+	cursor: pointer;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: #000;
+	transition: .5s;
+	&:before{
+	position: absolute;
+	content:"";
+	height: 17px;
+	width: 17px;
+	left: 6px;
+	bottom: 4px;
+	background: red;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+}
+
+.round{
+	border-radius: 28px;
+	&:before{
+	border-radius: 50%;
+	}
+}
+
+input:checked{
+ & + .slider{
+	background: #00008B;
+	border: none;
+	&:before{
+	background: white;
+	}
+}
+	& +.slider:before{
+	-webkit-transform: translateX(25px);	
+	-ms-transform: translateX(25px);	
+	transform: translateX(25px)	}
+}
+
+input:focus + .slider{
+	box-shadow: 0 0 1px #00008B;
+}
+
+.head{
+	font-size: 8px;
+	font-weight: bolder;
+	text-align:center;
+}
+
+#bank{
+	margin-top: 10px;
+}
+
+@media (max-width: 600px){
+	#drum-machine{
+		width: 300px;
+		justify-contents: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	#controls{
+		margin-top: 15px;
+	}
+}
